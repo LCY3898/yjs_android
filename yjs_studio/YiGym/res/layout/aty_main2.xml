@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/vDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:id="@+id/flContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:id="@+id/leftPanel"
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@drawable/bg_menu"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/llHead"
+                style="@style/MainMenuItemHead" >
+
+                <com.cy.yigym.view.content.EventHeadImageView
+                    android:id="@+id/ivHead"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/demo_head" />
+
+                <TextView
+                    android:id="@+id/tvNickname"
+                    style="@style/MainMenuItemText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp" >
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
+                    android:background="#ef666666" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMsg"
+                style="@style/MainMenuItemContent" >
+
+                <ImageView
+                    style="@style/MainMenuItemContentIcon"
+                    android:src="@drawable/item_ic_message" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/MainMenuItemContentText"
+                        android:text="消息" />
+
+                    <TextView
+                        android:id="@+id/drawMsgIndicator"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_circle"
+                        android:text=""
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTa"
+                style="@style/MainMenuItemContent" >
+
+                <ImageView
+                    style="@style/MainMenuItemContentIcon"
+                    android:src="@drawable/item_ic_chase" />
+
+                <TextView
+                    style="@style/MainMenuItemContentText"
+                    android:text="追TA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSetting"
+                style="@style/MainMenuItemContent" >
+
+                <ImageView
+                    style="@style/MainMenuItemContentIcon"
+                    android:src="@drawable/item_ic_setting" />
+
+                <TextView
+                    style="@style/MainMenuItemContentText"
+                    android:text="设置" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/MainMenuItem" >
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

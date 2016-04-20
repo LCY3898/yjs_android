@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!--
+         <com.cy.yigym.view.ThumbTextView
+        android:id="@+id/tvThumb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#ff5ecffb"
+        android:textSize="@dimen/sp16"
+        android:visibility="gone" />
+    -->
+
+
+    <!--
+         <SeekBar
+        android:id="@+id/sbProgress"
+        style="@style/seekBarToTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:thumb="@drawable/live_star_3" />
+    -->
+
+    <SeekBar
+        android:id="@+id/sbProgress"
+        style="@style/seekBarToTarget"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/svContent"
+        android:thumb="@null" />
+
+    <HorizontalScrollView
+        android:id="@+id/svContent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvCur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#ff5cd2ff"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#ff777f8c"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</merge>

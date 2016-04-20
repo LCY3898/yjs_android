@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_height="wrap_content" >
+
+        <com.cy.yigym.view.content.SpinerMenuView
+            android:id="@+id/courseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dip" />
+
+
+        <com.cy.yigym.view.content.SpinerMenuView
+            android:id="@+id/courseCoach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dip" />
+
+
+
+        <com.cy.yigym.view.content.SpinerMenuView
+            android:id="@+id/courseCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dip" />
+
+
+
+        <com.cy.yigym.view.content.SpinerMenuView
+            android:id="@+id/courseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dip" />
+    </LinearLayout>
+
+
+
+    <com.hhtech.pulltorefresh.PullToRefreshListView
+        android:id="@+id/preCourseListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/tvNoNet"
+        android:layout_width="230dip"
+        android:layout_height="90dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dip"
+        android:background="@drawable/bg_network"
+        android:gravity="center"
+        android:text="无网络连接，请重试"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvNoPreCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dip"
+        android:text="暂无往期课程"
+        android:textColor="#606060"
+        android:textSize="@dimen/sp20"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlNoFind"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ivNoFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dip"
+            android:background="@drawable/less_find" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivNoFind"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dip"
+            android:text="没找到，换个筛选条件试试"
+            android:textColor="#606060"
+            android:textSize="@dimen/sp20" />
+    </RelativeLayout>
+
+</LinearLayout>

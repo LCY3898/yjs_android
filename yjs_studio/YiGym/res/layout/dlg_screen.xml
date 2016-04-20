@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/linContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="筛选"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="性别"
+                android:textColor="#ff05bce1"
+                android:textSize="@dimen/sp18" />
+
+            <RadioGroup
+                android:id="@+id/rgSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/btn_male"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/chb_mal_selector"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/btn_female"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/chb_femal_selector"
+                    android:button="@null" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/txtSearchRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="left"
+                    android:text="搜索范围"
+                    android:textColor="#ff05bce1"
+                    android:textSize="@dimen/sp18" />
+
+                <TextView
+                    android:id="@+id/tv_screendistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtSearchRange"
+                    android:text="5km"
+                    android:textColor="#ff05bce1"
+                    android:textSize="@dimen/sp16" />
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/screenseekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:max="500"
+                android:progress="1"
+                android:progressDrawable="@drawable/seekbar_define_color_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="110dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_setdialog"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="#ff757575"
+                    android:textSize="@dimen/sp18" />
+
+                <Button
+                    android:id="@+id/btn_sure"
+                    android:layout_width="110dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/btn_setdialog"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="#ff47c1d4"
+                    android:textSize="@dimen/sp18" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

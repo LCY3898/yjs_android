@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hhtech.pulltorefresh.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ptrRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:fastScrollEnabled="false"
+    android:fillViewport="true"
+    android:footerDividersEnabled="false"
+    android:headerDividersEnabled="false"
+    android:scrollbars="@null"
+    android:smoothScrollbar="true"
+    ptr:ptrHeaderTextColor="#999999"
+    ptr:ptrMode="pullFromStart" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/llNotNetWarning"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#fffbeeb8"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/icon_warning"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/icon_arrow_right"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="世界上最遥远的距离就是没网，请检查设置。"
+                android:textColor="@color/common_text_dark"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eeeeee" >
+
+            <RelativeLayout
+                android:id="@+id/rlChiefCoach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingBottom="10dip"
+                android:paddingLeft="10dip"
+                android:paddingTop="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="今日主教"
+                    android:textColor="@color/main_text_color" />
+
+                <ImageView
+                    android:id="@+id/icon_next"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next" />
+
+                <com.cy.widgetlibrary.view.CustomCircleImageView
+                    android:id="@+id/chiefcoachHead"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/icon_next"
+                    android:src="@drawable/head"
+                    android:visibility="gone" />
+
+                <com.cy.widgetlibrary.view.CustomCircleImageView
+                    android:id="@+id/chiefcoachHead1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/chiefcoachHead"
+                    android:src="@drawable/head"
+                    android:visibility="gone" />
+
+                <com.cy.widgetlibrary.view.CustomCircleImageView
+                    android:id="@+id/chiefcoachHead2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/chiefcoachHead1"
+                    android:src="@drawable/head"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/flCourseMsg"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_below="@+id/rlChiefCoach" >
+
+                <ImageView
+                    android:id="@+id/courseImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:id="@+id/rlStartPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:id="@+id/linJoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tvCourseTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dip"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp24" />
+
+                        <Button
+                            android:id="@+id/btnEnterLive"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/selector_btn_blue"
+                            android:text="立即加入"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCourseJoinNum"
+                        style="@style/live_text"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvCoach"
+                        style="@style/live_text"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:drawableLeft="@drawable/live_cast_coach"
+                        android:drawablePadding="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp14" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rlNoStartPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#99000000"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dip"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvBeginTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:drawableLeft="@drawable/ic_track"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLiveCoach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/live_cast_coach"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center"
+                        android:text="下一个直播"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvCourseTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp24"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text="距离开始时间还剩"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tvCountDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp20"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCastingHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/casting_icon"
+                    android:drawablePadding="5dp"
+                    android:text="正在直播"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/llBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flCourseMsg"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvCoursePreShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/main_course_advance"
+                    android:gravity="center"
+                    android:text="课程预告"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/tvOldCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/main_course_previous"
+                    android:gravity="center"
+                    android:text="往期课程"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/tvMyFootprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/main_course_trace"
+                    android:gravity="center"
+                    android:text="我的足迹"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/llBar"
+                android:background="#ffc5c3c3" />
+
+            <TextView
+                android:id="@+id/tvHotCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vLine"
+                android:background="@color/bg_hot_course"
+                android:padding="10dp"
+                android:text="热门课程"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/sp16" />
+
+            <com.cy.yigym.view.CustomExpandGridView
+                android:id="@+id/gvHotCourse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tvHotCourse"
+                android:layout_margin="5dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="2"
+                android:scrollbars="@null"
+                android:verticalSpacing="15dp" >
+            </com.cy.yigym.view.CustomExpandGridView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.hhtech.pulltorefresh.PullToRefreshScrollView>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/llToShare"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#f0f0f0"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlAllDataShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llCode"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:layout_marginTop="20dip" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_corner" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_fenxiang"
+                android:textSize="@dimen/sp16" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvcontext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:text="已在e健身锻炼"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvSportNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:text="9"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp18" />
+
+                    <com.cy.widgetlibrary.view.CustomCircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ccvMyHead"
+                        android:layout_width="80dip"
+                        android:layout_height="80dip"
+                        android:layout_marginTop="10dip"
+                        app:border_color="#ff69717c"
+                        app:border_width="3dp" />
+
+                    <TextView
+                        android:id="@+id/tvMyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:textColor="#ffced8e2"
+                        android:textSize="@dimen/sp18"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginRight="30dip"
+                        android:layout_marginTop="10dip" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:id="@+id/ivTime"
+                                android:layout_width="20dip"
+                                android:layout_height="20dip"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/ic_total_time" />
+
+                            <TextView
+                                android:id="@+id/tvAllTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dip"
+                                android:text=""
+                                android:textColor="#ffedf0f5"
+                                android:textSize="@dimen/sp18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dip"
+                                android:text="总时长"
+                                android:textColor="#ff5b677f"
+                                android:textSize="@dimen/sp14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:id="@+id/ivDis"
+                                android:layout_width="20dip"
+                                android:layout_height="20dip"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/ic_total_distance" />
+
+                            <TextView
+                                android:id="@+id/tvAllDistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dip"
+                                android:text=""
+                                android:textColor="#ffedf0f5"
+                                android:textSize="@dimen/sp18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dip"
+                                android:text="总距离"
+                                android:textColor="#ff5b677f"
+                                android:textSize="@dimen/sp14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:id="@+id/ivCal"
+                                android:layout_width="20dip"
+                                android:layout_height="20dip"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/ic_total_calorie" />
+
+                            <TextView
+                                android:id="@+id/tvAllCalrie"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dip"
+                                android:text=""
+                                android:textColor="#ffedf0f5"
+                                android:textSize="@dimen/sp18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dip"
+                                android:text="总消耗"
+                                android:textColor="#ff5b677f"
+                                android:textSize="@dimen/sp14" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvWarning"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/ivCode"
+                android:layout_width="96dip"
+                android:layout_height="96dip"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="e健身－成人之美"
+                android:textColor="#747d88" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ivLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="长按可识别二维码，加入e健身"
+            android:textColor="#747d88"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/logo_to_share" />
+    </RelativeLayout>
+
+</FrameLayout>

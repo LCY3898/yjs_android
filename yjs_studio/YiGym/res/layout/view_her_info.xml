@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlBg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/imgHead"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgHead"
+        android:layout_below="@+id/imgHead"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="昵称"
+        android:textColor="#ff434345"
+        android:textSize="@dimen/sp18" />
+
+    <ImageView
+        android:id="@+id/imgSex"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/imgHead"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/txtUserName" />
+
+    <TextView
+        android:id="@+id/txtDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imgHead"
+        android:layout_below="@+id/imgHead"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="5km"
+        android:textColor="#ff6ccee9"
+        android:textSize="@dimen/sp18" />
+
+</RelativeLayout>

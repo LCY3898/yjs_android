@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#31BDDF">
+
+        <RelativeLayout
+            android:id="@+id/rlChat"
+            style="@style/toolbar_item"
+            android:minHeight="40dip"
+            >
+
+            <TextView
+                style="@style/toolbar_text"
+                android:duplicateParentState="true"
+                android:text="私聊"
+                android:textSize="@dimen/sp20"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dip"
+            android:background="#65d7ed"/>
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dip"
+            android:background="#0489a5"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rlNotify"
+            style="@style/toolbar_item"
+            android:minHeight="40dip" >
+
+            <TextView
+                style="@style/toolbar_text"
+                android:duplicateParentState="true"
+                android:text="通知"
+                android:textSize="@dimen/sp20"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:visibility="gone"/>
+    <com.cy.widgetlibrary.view.CustomViewPager
+        android:id="@+id/view_page_notify"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/vTitle" >
+    </com.cy.widgetlibrary.view.CustomViewPager>
+</LinearLayout>

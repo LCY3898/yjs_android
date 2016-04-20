@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6ABCD3">
+    <!--蓝牙连接成功界面!-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+            android:id="@+id/ll_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/head"/>
+            <TextView
+                android:id="@+id/tv_userConnected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_image"
+                android:text="XXX连接成功"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/ll_image">
+            <Button
+                android:id="@+id/btn_backHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="回到首页"/>
+            <Button
+                android:id="@+id/btn_searchAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/btn_backHome"
+                android:layout_centerHorizontal="true"
+                 android:text="重新扫描"/>
+            <TextView
+                android:id="@+id/tv_userDisconnected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_below="@id/btn_searchAgain"
+                android:layout_centerHorizontal="true"
+                android:text="中断连接"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

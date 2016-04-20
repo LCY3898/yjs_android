@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe7e8ea"
+    android:orientation="vertical"
+    android:id="@+id/root">
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/vTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.cy.widgetlibrary.content.CustomTitleView>
+
+    <LinearLayout
+        android:id="@+id/llPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <com.cy.widgetlibrary.view.CustomCircleImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:textColor="#ff444d56"
+                android:textSize="@dimen/sp18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:textColor="#ff757e85"
+                android:textSize="@dimen/sp16" />
+
+            <Button
+                android:id="@+id/btnToMedal"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:padding="4dp"
+                android:text="查看获得勋章"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.hhtech.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/ptrfsvGrow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.cy.yigym.view.CustomExpandableListView
+            android:id="@+id/elvGrowList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:listSelector="@android:color/transparent"
+            android:divider="@null"
+            android:scrollbars="@null" >
+        </com.cy.yigym.view.CustomExpandableListView>
+    </com.hhtech.pulltorefresh.PullToRefreshScrollView>
+
+</LinearLayout>

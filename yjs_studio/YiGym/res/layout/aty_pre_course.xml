@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/vTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <fragment
+        android:id="@+id/fragPreCourse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.cy.yigym.fragment.FragmentPreCourse" />
+
+</LinearLayout>

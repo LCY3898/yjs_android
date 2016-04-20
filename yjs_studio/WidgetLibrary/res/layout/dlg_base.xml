@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/dlg_base_linContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="30dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="30dip" >
+            <ImageView
+                android:id="@+id/ivBike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bt_bike"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#ffe7e7e7"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pop_btm_w">
+
+            <Button
+                android:id="@+id/btnCenter"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="去扫描"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_confirm_add"
+                android:visibility="gone"
+                />
+        <LinearLayout
+            android:id="@+id/dlg_base_linFunction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pop_btm_w"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/dlg_base_btnLeft"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:background="@drawable/dlg_goal_btn_selector"
+                android:text="取消"
+                android:textColor="@drawable/dlg_goal_btn_text_selector"
+                android:textSize="17sp"
+                android:layout_gravity="center_vertical"/>
+
+            <View
+                android:id="@+id/vlineFunction"
+                android:layout_width="8dip"
+                android:layout_marginLeft="5dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/dlg_base_btnRight"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/dlg_goal_btn_selector"
+                android:text="确认"
+                android:textColor="@drawable/dlg_goal_btn_text_selector"
+                android:textSize="17sp"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

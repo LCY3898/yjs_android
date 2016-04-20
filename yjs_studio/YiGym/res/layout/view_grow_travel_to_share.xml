@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/llToShare"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlGrowTravelToShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="20dip"
+            android:padding="0dip" >
+
+            <com.cy.yigym.view.CustomRoundedDrawableImageView
+                android:id="@+id/ivSharePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/llMySelf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivSharePhoto"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal" >
+
+                    <com.cy.widgetlibrary.view.CustomCircleImageView
+                        android:id="@+id/ccivHeader"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip" />
+
+                    <TextView
+                        android:id="@+id/tvShareText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@+id/ccivHeader"
+                        android:text=""
+                        android:textColor="#747d88"
+                        android:textSize="@dimen/sp12" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivCode"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:layout_below="@+id/llMySelf"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:text="长按可识别二维码，加入e健身"
+            android:textColor="#747d88"
+            android:textSize="@dimen/sp12" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/logo_to_share" />
+    </LinearLayout>
+
+</FrameLayout>

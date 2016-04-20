@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dropDownMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:minHeight="40dip"
+    android:background="#eeeeee">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip">
+    <TextView
+        android:id="@+id/tvMenuText"
+        style="@style/pre_course_menu_textview"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/sub_text_color"
+        android:text="课程类型"
+        android:textSize="14sp"/>
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dip"
+        android:background="@drawable/pre_course_drop_down_image"/>
+    </LinearLayout>
+</LinearLayout>

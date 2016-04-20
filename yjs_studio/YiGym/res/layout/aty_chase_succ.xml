@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMeetSucc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_meet_succ"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        >
+        <com.cy.widgetlibrary.view.CustomCircleImageView
+            android:id="@+id/cuHeadview1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="80dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/head"
+            />
+        <com.cy.widgetlibrary.view.CustomCircleImageView
+            android:id="@+id/cuHeadview2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp"
+            android:src="@drawable/head" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/meetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="你和阿琪成功会面"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/whites"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/meTvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12.55公里"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableLeft="@drawable/bg_sports_distance"
+            android:textColor="@color/whites"
+            android:textSize="@dimen/sp14"/>
+        <TextView
+            android:id="@+id/meTMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/bg_sports_time"
+            android:text="30.0分钟"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/whites"
+            android:textSize="@dimen/sp14"/>
+        <TextView
+            android:id="@+id/meTCalorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11卡路里"
+            android:drawableLeft="@drawable/bg_sports_cal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/whites"
+            android:textSize="@dimen/sp14"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/bg_sendmessage"
+        android:text="发送消息                  "
+        android:background="@drawable/shapes"
+        android:textColor="@color/whites"
+        android:textSize="@dimen/sp14"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/bg_share"
+        android:text="分享这一刻的心情  "
+        android:background="@drawable/shapes"
+        android:textColor="@color/whites"
+        android:textSize="@dimen/sp14"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

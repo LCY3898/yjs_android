@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/vTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cy.widgetlibrary.content.CustomTitleView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+        android:background="#f4f4f4">
+
+        <RelativeLayout
+            android:id="@+id/rlWatchHistory"
+            style="@style/toolbar_item"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tvHistoryBar"
+                style="@style/toolbar_text"
+                android:layout_height="match_parent"
+                android:duplicateParentState="true"
+                android:text="观看历史"
+                android:textSize="@dimen/sp17"
+                android:gravity="center"
+                android:layout_centerInParent="true"/>
+            <View
+                android:id="@+id/historyIndicator"
+                android:layout_height="2dip"
+                android:layout_width="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="#31BDDF"
+                android:visibility="invisible"
+                android:layout_marginBottom="1dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlChaseHistory"
+            style="@style/toolbar_item"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tvChaseHistoryBar"
+                style="@style/toolbar_text"
+                android:layout_height="match_parent"
+                android:duplicateParentState="true"
+                android:text="追过的TA"
+                android:textSize="@dimen/sp17"
+                android:gravity="center"
+                android:layout_centerInParent="true" />
+
+            <View
+                android:id="@+id/chaseIndicator"
+                android:layout_height="2dip"
+                android:layout_width="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="#31BDDF"
+                android:visibility="invisible"
+                android:layout_marginBottom="1dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_height="0.3dip"
+        android:layout_width="match_parent"
+        android:background="#bbb"/>
+
+    <com.cy.widgetlibrary.view.CustomViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.cy.widgetlibrary.view.CustomViewPager>
+</LinearLayout>

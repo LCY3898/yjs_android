@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlChiefCoachCourse"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_marginTop="5dp"
+    android:background="#ffffffff" >
+
+    <ImageView
+        android:id="@+id/ivChiefCourseImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_third" />
+
+    <View
+        android:id="@+id/vMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000" />
+
+    <ImageView
+        android:id="@+id/ivImageprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvChiefCoachTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="动感单车第一期"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp22" />
+
+        <TextView
+            android:id="@+id/tvCoursebeginTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="08:00开始"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp17" />
+
+        <RelativeLayout
+            android:id="@+id/rlCourseOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:paddingBottom="8dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingTop="8dip" >
+
+            <TextView
+                android:id="@+id/tvCourseOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="立即预约"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp17" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.efit.sport"
+    android:versionCode="39"
+    android:versionName="1.0.19" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 友盟SDK权限  start -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 友盟SDK权限  end -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <!-- 百度定位sdk 权限 start -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 百度定位sdk  权限 end -->
+
+
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- 容联云 -->
+    // 允许程序录制音频
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    // 允许应用程序修改全局声音设置的权限
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    // 允许程序禁用键盘锁(非必选,由应用选择是否需要)
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    // 允许使用PowerManager的WakeLocks保持进程在休眠时从屏幕消失(非必选,由应用选择是否需要)
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="ANDROID.PERMISSION.GET_TASKS" />
+
+    <application
+        android:name="com.cy.yigym.YJSApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- 微信分享start -->
+        <activity
+            android:name="com.efit.sport.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信分享end -->
+        <!-- QQ和Qzone start -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1104808428" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- QQ和Qzone end -->
+        <!-- UmengAppkey start -->
+        <!-- umeng自动更新和社会化组建可共享同一个key -->
+
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55b0c42ee0f55ae857000dd9" > <!-- umeng自动更新key  55b0c42ee0f55ae857000dd9 -->
+
+
+            <!-- android:value="55b8e23f67e58e6d110040ac" -->
+            <!-- umeng社会化组件key -->
+        </meta-data>
+        <!-- UmengAppkey end -->
+
+
+        <!-- 百度地图start -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="bAm2qxYaRVDNMlWGLXOzA7Ew" />
+        <!-- 百度地图end -->
+
+
+        <!-- #####################容联云start#################### -->
+        //容联云
+        // ECSDK核心服务类
+        <service
+            android:name="com.yuntongxun.ecsdk.ECClientService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.hisun.phone.core.voice.CCPService"
+            android:exported="false" />
+
+        <receiver android:name="com.efit.sport.p2p.VideoCallReceiver" />
+
+        <!-- #####################容联云end#################### -->
+
+        <activity
+            android:name="com.cy.yigym.aty.AtyMain"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyServerTest"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyRegis"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyPersonalInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyBarrage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyMain2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyMyself"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyChaseMain"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyPreCourse"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyCommentYjs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyFeedBack"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtySetting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtySign"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyTraces"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyUserInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyBoot"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyLogin"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyProfessional"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyGetBackPwd"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyOpenBluetooth"
+            android:label="@string/title_activity_aty_open_bluetooth"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyConnectBtSuccess"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyConnectBtHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyScannerBt"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtySetSports"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtySportTarget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zbar.lib.CaptureCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyAboutEjs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyTargetSetting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyMeetSucc"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyChaseHer"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyChaseHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyScore"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtySportRecord"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyMessages"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyCreatTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyRank"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyTaskDetails"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyIM"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name=".livecast.AtyLiveCast"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="org.videolan.vlc.ui.VlcVideoActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="org.videolan.vlc.ui.ClubModeVideoActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyGrowthTravel"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyLiveAdvance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.efit.sport.livecast.AtyVideoPlayer"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyPreCourseLive"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyChiefCoach"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyMyMedal"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyEditContent"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cy.yigym.aty.AtyFirstGuide"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name="com.cy.yigym.service.WSService" >
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:textColor="#687078"
+            android:textSize="@dimen/sp14" />
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ivView"
+                android:layout_centerHorizontal="true"
+                android:background="@color/devide_line" />
+
+            <ImageView
+                android:id="@+id/ivView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_grow_up_login" />
+
+            <View
+                android:id="@+id/viewLine2"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivView"
+                android:layout_centerHorizontal="true"
+                android:background="@color/devide_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_write" >
+
+            <TextView
+                android:id="@+id/tvItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/rlFuc"
+                android:maxWidth="150dip"
+                android:singleLine="false"
+                android:text="发大会上讲话看到上海科技馆大会上发大会上讲话看到上发大会"
+                android:textColor="#747d88"
+                android:textSize="@dimen/sp14" />
+
+            <RelativeLayout
+                android:id="@+id/rlFuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <LinearLayout
+                    android:id="@+id/llPhotoShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/ivImageView"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ic_launcher"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/ivToShare"
+                        android:layout_width="18dip"
+                        android:layout_height="18dip"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/share_icon" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAddPic"
+                    android:layout_width="80dip"
+                    android:layout_height="35dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="添加照片"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

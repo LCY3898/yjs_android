@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/vLine1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffe0e0e2" />
+
+    <TextView
+        android:id="@+id/tvMedalType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/vLine1"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_medal"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="今日之星"
+        android:textColor="#ff58ccfb"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tvMedalCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="1/10"
+        android:textColor="#ff747c87"
+        android:textSize="@dimen/sp14" />
+
+    <View
+        android:id="@+id/vLineBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tvMedalType"
+        android:background="#ffe0e0e2" />
+
+<!--     <HorizontalScrollView
+        android:id="@+id/hsMedalList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMedalCount"
+        android:scrollbars="@null"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/llMedalList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView> -->
+
+    <com.cy.yigym.view.CustomExpandGridView
+        android:id="@+id/gvMedalList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/vLineBottom"
+        android:numColumns="3" />
+
+</RelativeLayout>

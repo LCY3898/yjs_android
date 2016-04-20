@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff">
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/targettitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.cy.widgetlibrary.content.CustomTitleView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="请设置目标"
+        android:textColor="#757777"
+        android:textSize="@dimen/sp16" />
+
+    <LinearLayout
+        android:id="@+id/sports_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sports_time"
+            style="@style/goal_lable_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="时间" />
+
+        <Button
+            android:id="@+id/sports_distance"
+            style="@style/goal_lable_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:text="距离" />
+
+        <Button
+            android:id="@+id/sports_cal"
+            style="@style/goal_lable_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:text="卡路里" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        layout="@layout/fragment_targetsetting" >
+    </include>
+
+</LinearLayout>

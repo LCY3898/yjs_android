@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 找回密码! -->
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/vTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vTitle"
+        android:layout_marginLeft="@dimen/register_side_margin"
+        android:layout_marginRight="@dimen/register_side_margin"
+        android:layout_marginTop="60dp" >
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/editor_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_delete"
+            android:background="@android:color/transparent"
+            android:hint="手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_delete"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_verCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_phone"
+        android:layout_marginLeft="@dimen/register_side_margin"
+        android:layout_marginRight="@dimen/register_side_margin"
+        android:layout_marginTop="24dp" >
+
+        <EditText
+            android:id="@+id/et_verCode"
+            style="@style/editor_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_verCode"
+            android:hint="验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_verCode"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/btn_delete"
+            android:text="获取验证码"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_psw"
+        style="@style/editor_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_verCode"
+        android:layout_marginLeft="@dimen/register_side_margin"
+        android:layout_marginRight="@dimen/register_side_margin"
+        android:layout_marginTop="29dp"
+        android:hint="密码(6-30位字母、数字或字符)"
+        android:password="true"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_psw"
+        android:layout_marginLeft="@dimen/register_side_margin"
+        android:layout_marginRight="@dimen/register_side_margin"
+        android:layout_marginTop="100dp"
+        android:text="确定"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

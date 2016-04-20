@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:id="@+id/lisport"
+    android:layout_width="300dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rlShareDis"
+        style="@style/share_sport_data_style"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvLuCheng"
+            style="@style/share_sport_data_text_style"
+            android:text="路程" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="0.3dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/tvLuCheng"
+            android:layout_weight="1"
+            android:background="#4d4d4d" />
+
+        <TextView
+            android:id="@+id/tvSportDis"
+            style="@style/share_sport_data_step_style"
+            android:layout_marginLeft="25dip"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/line1"
+            android:text="0.9"
+            android:textSize="40sp"
+            />
+
+        <TextView
+            style="@style/share_sport_data_unit"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/tvSportDis"
+            android:text="km"
+            android:textSize="29sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlShareCal"
+        style="@style/share_sport_data_style"
+        android:layout_alignLeft="@+id/rlShareDis"
+        android:layout_below="@+id/rlShareDis"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvReLiang"
+            style="@style/share_sport_data_text_style"
+            android:text="热量" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="0.3dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/tvReLiang"
+            android:layout_weight="1"
+            android:background="#4d4d4d" />
+
+        <TextView
+            android:id="@+id/tvSportCal"
+            style="@style/share_sport_data_step_style"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dip"
+            android:layout_toRightOf="@+id/line2"
+            android:text="0.9"
+            android:textSize="40sp" />
+
+        <TextView
+            style="@style/share_sport_data_unit"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16sp"
+            android:text="cal"
+            android:layout_toRightOf="@id/tvSportCal"
+            android:textSize="29sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlShareTim"
+        style="@style/share_sport_data_style"
+        android:layout_alignLeft="@id/rlShareCal"
+        android:layout_below="@id/rlShareCal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvShiChang"
+            style="@style/share_sport_data_text_style"
+            android:text="时长" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="0.3dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/tvShiChang"
+            android:layout_weight="1"
+            android:background="#4d4d4d" />
+
+        <TextView
+            android:id="@+id/tvSportMin"
+            style="@style/share_sport_data_step_style"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dip"
+            android:layout_toRightOf="@+id/line3"
+            android:text="0.9"
+            android:textSize="40sp" />
+
+        <TextView
+            style="@style/share_sport_data_unit"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16sp"
+            android:text="min"
+            android:textSize="29sp"
+            android:layout_toRightOf="@id/tvSportMin"/>
+    </RelativeLayout>
+</RelativeLayout>
+</merge>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff" >
+
+    <RelativeLayout
+        android:id="@+id/coachInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" >
+
+        <com.cy.widgetlibrary.view.CustomCircleImageView
+            android:id="@+id/chiefCoachHeadView"
+            android:layout_width="53dip"
+            android:layout_height="53dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/head" />
+
+        <LinearLayout
+            android:id="@+id/llCoach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@+id/chiefCoachHeadView"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/ivJiaoLian"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:src="@drawable/jiaolian2" />
+
+            <TextView
+                android:id="@+id/tvChiefCoachName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text=""
+                android:textColor="#434d56"
+                android:textSize="@dimen/sp17" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCoachNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/llCoach"
+            android:layout_below="@+id/llCoach"
+            android:layout_marginTop="5dip"
+            android:text=""
+            android:textColor="#747d88"
+            android:textSize="@dimen/sp16" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llViewAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coachInfo"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

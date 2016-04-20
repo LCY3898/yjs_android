@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/liveTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.cy.widgetlibrary.content.CustomTitleView>
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/liveTitle"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rlLiveCast"
+            style="@style/toolbar_item"
+            android:minHeight="40dip" >
+
+            <TextView
+                android:id="@+id/tvLiveBar"
+                style="@style/toolbar_text"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:text="正在直播" />
+
+            <View
+                android:id="@+id/vBarLine1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvLiveBar"
+                android:layout_alignRight="@+id/tvLiveBar"
+                android:layout_below="@+id/tvLiveBar"
+                android:background="@drawable/bg_integral"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCourse"
+            style="@style/toolbar_item"
+            android:minHeight="40dip" >
+
+            <TextView
+                android:id="@+id/tvPreCourseBar"
+                style="@style/toolbar_text"
+                android:layout_centerInParent="true"
+                android:duplicateParentState="true"
+                android:text="往期课程" />
+
+            <View
+                android:id="@+id/vBarLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvPreCourseBar"
+                android:layout_alignRight="@+id/tvPreCourseBar"
+                android:layout_below="@+id/tvPreCourseBar"
+                android:background="@drawable/bg_integral"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dip"
+        android:background="#bbb" />
+
+    <com.cy.widgetlibrary.view.CustomViewPager
+        android:id="@+id/view_page_live"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_content" >
+    </com.cy.widgetlibrary.view.CustomViewPager>
+
+</LinearLayout>

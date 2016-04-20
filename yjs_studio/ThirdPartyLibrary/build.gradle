@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+	
+	sourceSets {
+        main {
+            if(project.USE_NIM.equals("true")) {
+                manifest.srcFile 'lib_nim/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'AndroidManifest.xml'
+            }
+
+            java.srcDirs = ['src']
+            java.srcDirs += ['src_easeim']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            //jniLibs.srcDirs = ['libs','libs_ytx5']
+            if(project.USE_ORIGIN_IJK.equals("true")) {
+                jniLibs.srcDirs = ['libs_studio']
+                java.srcDirs += ['src_ijk']
+            } else {
+                jniLibs.srcDirs = ['lib_hoopmedia']
+            }
+
+            if(project.USE_NIM.equals("true")) {
+                jniLibs.srcDirs += ['lib_nim']
+            } else {
+                jniLibs.srcDirs += ['lib_easeim']
+            }
+            //jniLibs.srcDirs = ['libs','libs_ytx5','lib_easeim']
+            //jni.srcDirs = ['serialport_jni']
+        }
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+
+}
+
+dependencies {
+    if(project.USE_ORIGIN_IJK.equals("true")) {
+        compile fileTree(dir: 'libs_studio', exclude: ['android-support*.jar', 'gson-2.2.4.jar'], include: ['*.jar'])
+    } else {
+        compile fileTree(dir: 'lib_hoopmedia', exclude: ['android-support*.jar', 'gson-2.2.4.jar'], include: ['*.jar'])
+    }
+
+
+    if(project.USE_NIM.equals("true")) {
+        //网易云信
+        compile fileTree(dir: 'lib_nim', include: ['*.jar'])
+    } else {
+        //环信
+        compile fileTree(dir: 'lib_easeim', include: ['*.jar'])
+    }
+
+    //容联云第五版
+    //compile fileTree(dir: 'libs_ytx5', include: ['*.jar'])
+    compile 'com.android.support:support-v4:21.+'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile project(':BaseLibrary')
+}

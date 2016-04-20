@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4">
+    <RelativeLayout
+        android:id="@+id/editLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#40000000"
+            />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dlg_goal_btn_selector"
+            android:text="取消"
+            android:textColor="@drawable/dlg_goal_btn_text_selector"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dlg_goal_btn_selector"
+            android:text="删除"
+            android:textColor="@drawable/dlg_goal_btn_text_selector"
+            android:textSize="17sp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <com.hhtech.pulltorefresh.PullToRefreshListView
+        android:id="@+id/lvNotifyListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/editLayout">
+    </com.hhtech.pulltorefresh.PullToRefreshListView>
+    
+</RelativeLayout>

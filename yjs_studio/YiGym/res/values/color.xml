@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="devide_line_horizontal">#0D131D</color>
+    <color name="devide_line">#CBCED2</color>
+    <color name="whites">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#20C9DD</color>
+    <color name="gray_font">#818181</color>
+    <color name="light_gray">#d4d4d4</color>
+    <color name="EXY">#4169E1</color>
+    <color name="reg_to_login">#4169E1</color>
+    <color name="bt_register">#599DD6</color>
+    <color name="title_bar">#6ABCD3</color>
+    <color name="forget_pwd">#4169E1</color>
+    <color name="user_info">#4169E1</color>
+    <color name="yellow">#FDDB37</color>
+    <color name="orange">#FDA62C</color>
+    <color name="finishorcontinue">#EA6155</color>
+    <color name="transparent">#00000000</color>
+    <color name="data_color">#666666</color>
+    <color name="text_color">#868686</color>
+    <color name="common_text_dark">#ff4b4b4b</color>
+    <color name="common_text_tink">#ff878787</color>
+    <color name="user_info_text_dark">#ff646b71</color>
+    <color name="user_info_text_tink">#ff888f97</color>
+    <color name="user_sport_data_chart_blue">#ff5ed1ff</color>
+
+    <!-- 多态start -->
+    <color name="editor_border_normal">#80505050</color>
+    <color name="editor_border_focused">#0770a7</color>
+    <color name="editor_border_error_hint">#ff89aa</color>
+    <color name="btn_disabled">#aeaeae</color>
+    <color name="btn_blue_normal">#05bbe2</color>
+    <color name="btn_blue_pressed">#0999b8</color>
+    <color name="btn_yellow_normal">#f6b70c</color>
+    <color name="btn_yellow_pressed">#ee9200</color>
+    <color name="btn_white_normal">#f6f6f6</color>
+    <color name="btn_white_border_normal">#747474</color>
+    <color name="btn_white_selected">#e9fcff</color>
+    <color name="btn_white_border_selected">#47bfd1</color>
+    <color name="tv_sports_quantity">#707082</color>
+    <color name="red">#f08d09</color>
+    <color name="rank_f">#fe2741</color>
+    <color name="rank_s">#ffcc8d</color>
+    <color name="rank_t">#6ec539</color>
+    <color name="rank_normal">#28282b</color>
+    <!-- 多态end -->
+
+    <color name="menu_item_click">#e8feff</color>
+    <color name="live_advance_bg">#f3feff</color>
+    <color name="seekbar_gray">#ffa0e0ff</color>
+
+    <!-- 新UI字体颜色 -->
+    <color name="main_text_color">#434d56</color>
+    <color name="sub_text_color">#747d88</color>
+
+    <!-- 热门课程背景色 -->
+    <color name="bg_hot_course">#e7e8ea</color>
+
+</resources>

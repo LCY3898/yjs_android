@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6">
+<com.cy.widgetlibrary.content.CustomTitleView
+    android:id="@+id/ctvMeetSuccTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></com.cy.widgetlibrary.content.CustomTitleView>
+    <RelativeLayout
+        android:id="@+id/rlMeet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:layout_below="@+id/ctvMeetSuccTitle">
+
+        <RelativeLayout
+            android:id="@+id/rlMeetAll"
+            android:layout_width="match_parent"
+            android:layout_height="300dip"
+            android:background="@drawable/cat_fc_clo">
+            <TextView
+                android:id="@+id/tvMeetText"
+                android:layout_width="200dip"
+                android:layout_height="40dip"
+                android:text="会面成功"
+                android:textColor="#ea647a"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="@dimen/sp15"
+                android:background="@drawable/btn_meet"
+                android:layout_marginTop="30dip"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/tvMeetText"
+                >
+                <com.cy.widgetlibrary.view.CustomCircleImageView
+                    android:id="@+id/cuHeadview1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/head"
+                    />
+                <com.cy.widgetlibrary.view.CustomCircleImageView
+                    android:id="@+id/cuHeadview2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="130dp"
+                    android:src="@drawable/head" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llSenderAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/rlMeetAll">
+
+            <com.cy.widgetlibrary.view.CustomCircleImageView
+                android:id="@+id/meetSuccMyID"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/head" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/btn_pop">
+                    <TextView
+                        android:id="@+id/meTvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="0km"
+                        android:textColor="@color/whites"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp17" />
+
+                    <TextView
+                        android:id="@+id/meTMins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00min"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/whites"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp17" />
+
+                    <TextView
+                        android:id="@+id/meTCalorie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0cal"
+                        android:textColor="@color/whites"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp17" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivWifi"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="35dp"
+            android:src="@drawable/icon_wifi"
+            android:layout_below="@+id/llSenderAll"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ivWifi"
+            android:layout_marginBottom="10dip">
+
+            <com.cy.widgetlibrary.view.CustomCircleImageView
+                android:id="@+id/meetSuccHerID"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/head" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/btn_pop">
+                    <TextView
+                        android:id="@+id/taTvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="0km"
+                        android:textColor="@color/whites"
+                        android:textSize="@dimen/sp17" />
+
+                    <TextView
+                        android:id="@+id/taTMins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00min"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/whites"
+                        android:textSize="@dimen/sp17" />
+
+                    <TextView
+                        android:id="@+id/taTCalorie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0cal"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/whites"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp17" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llToContact"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlMeet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_quit">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/pop_msg"
+            android:layout_marginLeft="30dip"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:text="联系TA"
+        android:textSize="@dimen/sp17"
+        android:textColor="#ffffff"
+        android:visibility="visible"
+        android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+</RelativeLayout>

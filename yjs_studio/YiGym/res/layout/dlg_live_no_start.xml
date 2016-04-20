@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/llDlgLiveNoStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dip"
+        android:background="#ee283140"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dip"
+                android:text="距离开播还有"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/countDownTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:text="00:30:45"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.cy.widgetlibrary.view.CustomCircleImageView
+            android:id="@+id/coachHeadImage"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/demo_head" />
+
+        <TextView
+            android:id="@+id/coachName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@drawable/live_cast_coach"
+            android:drawablePadding="4dp"
+            android:text="李晓明"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/llLivenoStartBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dip"
+                android:gravity="center_horizontal"
+                android:text="直播快开始了，请耐心等待\n或者你可以先"
+                android:textColor="@color/sub_text_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnWarmUp"
+                    android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:text="去追TA"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+
+                <Button
+                    android:id="@+id/btnLookPreCourse"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="#cf283140"
+                    android:text="观看往期课程"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dip"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/btn_close" />
+
+</RelativeLayout>

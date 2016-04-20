@@ -1,0 +1,466 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+
+
+
+
+
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+
+
+
+
+
+
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="NoTitleBar" parent="android:Theme.NoTitleBar"></style>
+
+    <style name="ButtomBar">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="ButtomBarImgBtn">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="top_private_chat">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@drawable/news_topbar_font</item>
+        <item name="android:background">@drawable/notify_01</item>
+    </style>
+
+    <style name="top_inform_news">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@drawable/news_topbar_font</item>
+        <item name="android:background">@drawable/notify_01</item>
+    </style>
+
+    <!-- 分享弹窗样式 -->
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="Dialog">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <!-- 动画 -->
+
+    <style name="popStyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/popup_enter</item>
+  //进入时的动画
+ <item name="@android:windowExitAnimation">@anim/popup_exit</item>
+    //退出时的动画
+</style>
+
+    <style name="editor_style">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ff424141</item>
+        <item name="android:textColorHint">#ff999999</item>
+        <item name="android:textCursorDrawable">@drawable/text_cursor</item>
+    </style>
+
+    <style name="tv_person_info">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/sub_text_color</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:drawablePadding">6dp</item>
+        <!-- <item name="android:drawableLeft">@drawable/msg_next</item> -->
+    </style>
+
+    <style name="toolbar_item">
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="toolbar_text">
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/toolbar_text_selector</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv_user_info1">
+        <item name="android:textColor">#353535</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="tv_user_info2">
+        <item name="android:textColor">#ffecf1f7</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_user_info">
+        <item name="android:textColor">#ff5b6a7f</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="sep_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dip</item>
+        <item name="android:layerType">software</item>
+        <item name="android:background">@drawable/dive_line_shapes</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+
+    <style name="goal_lable_style">
+        <item name="android:background">@drawable/btn_goal_selector</item>
+        <item name="android:textColor">@color/goal_text_selector</item>
+        <item name="android:textSize">17.0sp</item>
+    </style>
+
+    <!-- ＃＃＃＃＃运动分享界面的相关设置 -->
+    <style name="share_sport_data_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="share_sport_data_step_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#009fc0</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="share_sport_data_unit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#009fc0</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="share_sport_data_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp17</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">#4d4d4d</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginLeft">30dip</item>
+    </style>
+    <!-- ＃＃＃＃运动分享界面end -->
+    <!-- #############IM start############# -->
+    <style name="im_chat_text_date_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">@dimen/sp12</item>
+        <item name="android:background">@drawable/im_chat_time_shape</item>
+    </style>
+
+    <style name="im_chat_text_msg_style">
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:textColor">#ff545454</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:maxWidth">225dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="im_chat_img_avatar_style">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:src">@drawable/head</item>
+    </style>
+    <!-- #############IM end############# -->
+
+
+    <!-- 创建任务界面 -->
+    <style name="creat_task_step_style">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="rank_topbar_style">
+        <item name="android:textColor">@color/rank_text_selector</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="score_topbar_style">
+        <item name="android:textColor">@color/score_text_selector</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="commentyjs_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#47bfd1</item>
+    </style>
+
+    <style name="rank_text">
+        <item name="android:textColor">#ffc070</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="rank_nickname">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#28282b</item>
+    </style>
+
+    <style name="rank_text_detail">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#767676</item>
+    </style>
+
+    <style name="total_text_data">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#353535</item>
+    </style>
+
+    <style name="meet_data_share">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">#05bbe2</item>
+    </style>
+
+    <style name="meet_data_unit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#4d4d4d</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="meet_data_layout_share">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="live_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#747474</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="pre_course_menu_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/live_drop_down_menu_selector</item>
+    </style>
+
+    <style name="live_data_unit">
+        <item name="android:textColor">#ffeff3f6</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/sp14</item>
+    </style>
+
+    <style name="live_data_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="live_date_text">
+        <item name="android:textColor">@color/live_date_text_s</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="live_day_text">
+        <item name="android:textColor">@color/live_day_text_s</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="MainMenuItem">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MainMenuItemText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp18</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="MainMenuItemIcon">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="seekBarToTarget" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">10dp</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/shape_style_seekbar</item>
+    </style>
+
+    <style name="text_share_sport_data">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp17</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="user_sport_tag">
+        <item name="android:textColor">#ff454c52</item>
+        <item name="android:textSize">@dimen/sp16</item>
+    </style>
+
+    <style name="user_sport_value">
+        <item name="android:textColor">#ff757985</item>
+        <item name="android:textSize">@dimen/sp14</item>
+    </style>
+
+    <style name="user_sport_record">
+        <item name="android:textColor">#ff5ed1ff</item>
+        <item name="android:textSize">@dimen/sp20</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+    <!-- new style -->
+    <style name="MainMenuItemHead">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">40dp</item>
+        <item name="android:paddingBottom">36dp</item>
+    </style>
+
+    <style name="MainMenuItemHeadText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp18</item>
+        <item name="android:layout_marginTop">14dp</item>
+    </style>
+
+    <style name="MainMenuItemContent">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">88dp</item>
+    </style>
+
+    <style name="MainMenuItemContentIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+    <style name="MainMenuItemContentText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp18</item>
+        <item name="android:paddingLeft">24dp</item>
+    </style>
+
+    <style name="live_bottom_value_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">0.00</item>
+        <!-- 取消两个TextView之间的间隔 -->
+        <item name="android:layout_marginBottom">-8dp</item>
+        <item name="android:textColor">#ffeff4f8</item>
+        <item name="android:textSize">@dimen/sp22</item>
+    </style>
+
+    <style name="live_bottom_unit_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/sp18</item>
+    </style>
+
+</resources>

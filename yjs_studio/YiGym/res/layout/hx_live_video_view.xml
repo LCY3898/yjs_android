@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/llTitle"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pop_top">
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#aaaaaa"
+            android:layout_centerInParent="true"
+            android:text="XXX向您发起了视频通话"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlLiveVideo"
+        android:layout_width="160dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/ivImageView"
+            android:layout_width="160dp"
+            android:layout_height="210dp"
+            android:background="@drawable/head"/>
+
+        
+        <SurfaceView
+            android:id="@+id/localView"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:layout_alignBottom="@+id/vvLive"
+            android:layout_alignRight="@+id/vvLive">
+        </SurfaceView>
+
+        <SurfaceView
+            android:id="@+id/vvLive"
+            android:layout_width="160dp"
+            android:layout_height="210dp"
+            android:background="#60000000"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/rlIncomingConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/pop_btm">
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="13sp"
+                android:text="拒绝"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_cancle"/>
+            <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="3dp"
+                android:text="接听"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_listen"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlReleaseCall"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/pop_btm"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/live_stop"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:background="@drawable/goal_bg_cir" />
+
+            <com.cy.yigym.view.CircularSeekBar
+                android:id="@+id/seekbar_targetsetting"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="200dip"
+            android:layout_height="200dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_bluecirclebar" />
+
+        <TextView
+            android:id="@+id/tv_targetsetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="min"
+            android:textColor="@color/blue"
+            android:textSize="67sp" />
+
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_targetsetting"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="min"
+            android:textColor="#757777"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+</LinearLayout>

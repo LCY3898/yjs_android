@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlPreCourse"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" >
+
+        <ImageView
+            android:id="@+id/preCourseImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/vMask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#60000000" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/exer_play_off" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/preCourseImage"
+        android:paddingBottom="24dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/courseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="动感单车第三期课程"
+            android:textColor="@color/sub_text_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/courseCoach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/coach_icon"
+            android:drawablePadding="2dp"
+            android:paddingLeft="12dp"
+            android:text="李晓明"
+            android:textColor="@color/sub_text_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/watchCourseNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="335人观看了此视频"
+            android:textColor="@color/sub_text_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

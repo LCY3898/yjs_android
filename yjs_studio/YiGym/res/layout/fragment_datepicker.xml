@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        android:background="#05bbe2" >
+
+
+        <TextView
+            android:id="@+id/fragment_datepicker_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="20dp"
+            android:text="请选择日期"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="#EEEEEE"
+        android:orientation="vertical" >
+
+        <DatePicker
+            android:id="@+id/fragment_datepicker_picker_handler"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:calendarViewShown="false"
+            android:padding="4dp"
+            android:startYear="1919" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="#EEEEEE"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp" >
+
+
+        <Button
+            android:id="@+id/fragment_datepicker_btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:padding="18dp"
+            android:text="完成"
+            android:textColor="@color/sub_text_color"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/fragment_datepicker_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/fragment_datepicker_btn_confirm"
+            android:layout_toStartOf="@id/fragment_datepicker_btn_confirm"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:padding="18dp"
+            android:text="返回"
+            android:textColor="@color/sub_text_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

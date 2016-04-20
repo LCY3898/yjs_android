@@ -1,0 +1,8 @@
+<resources>
+
+
+    <dimen name="sport_bg_size">260dp</dimen>
+    <dimen name="sport_margin_top">15dp</dimen>
+    <dimen name="sport_bg_progress">200dp</dimen>
+    <dimen name="is_regis_marginTop">80dip</dimen>
+</resources>

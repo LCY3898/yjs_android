@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="sp16">16</integer>
+    <integer name="sp18">18</integer>
+    <integer name="sp20">20</integer>
+    <integer name="sp24">24</integer>
+
+</resources>

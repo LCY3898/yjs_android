@@ -1,0 +1,6 @@
+ 所需要用的权限:
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+ImageLoader官方地址:https://github.com/nostra13/Android-Universal-Image-Loader

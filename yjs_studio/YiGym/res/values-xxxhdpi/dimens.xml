@@ -1,0 +1,7 @@
+<resources>
+
+
+    <dimen name="sport_bg_size">320dp</dimen>
+    <dimen name="sport_margin_top">35dp</dimen>
+    <dimen name="is_regis_marginTop">170dip</dimen>
+</resources>

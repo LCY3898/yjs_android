@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <fragment
+        android:id="@+id/fragVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        class="com.cy.yigym.fragment.live.FragVideoDY"
+        android:fitsSystemWindows="true" />
+
+    <ImageView
+        android:id="@+id/bgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/vTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="网络异常,点击重新播放"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/ivRePlay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/play_again" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llLiveInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/sportData"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <com.cy.yigym.view.content.live.LiveInfoView
+                android:id="@+id/liveInfoView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:visibility="gone" >
+            </com.cy.yigym.view.content.live.LiveInfoView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRankList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <com.cy.yigym.view.content.live.LiveRankView
+                android:id="@+id/liveRankView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3" >
+            </com.cy.yigym.view.content.live.LiveRankView>
+        </LinearLayout>
+
+        <com.cy.yigym.view.content.live.LiveSportDatas
+            android:id="@+id/sportData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+        </com.cy.yigym.view.content.live.LiveSportDatas>
+    </RelativeLayout>
+
+    <com.efit.sport.videochat.LiveVideoView
+        android:id="@+id/liveVideoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/title_bar_height">
+    </com.efit.sport.videochat.LiveVideoView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="8.0dip"
+        android:gravity="center"
+        android:indeterminateDrawable="@anim/loadingprogress"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        class="com.cy.yigym.fragment.live.FragVideoDY" />
+    <com.cy.yigym.view.content.live.LiveSportDatas
+        android:id="@+id/sportData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </com.cy.yigym.view.content.live.LiveSportDatas>
+
+</RelativeLayout>

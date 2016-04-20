@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMenuItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dip"
+    android:background="@drawable/live_drop_down_menuitem_bg_selector">
+    <TextView
+        android:id="@+id/menuItemText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="全部"
+        android:layout_marginLeft="10dip"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:minHeight="40dip"
+        android:textColor="@color/live_drop_down_menuitem_selector"/>
+</LinearLayout>

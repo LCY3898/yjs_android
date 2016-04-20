@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/libraries/AChartSDK/AChartSDK.iml" filepath="$PROJECT_DIR$/libraries/AChartSDK/AChartSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BLELibrary/BLELibrary.iml" filepath="$PROJECT_DIR$/BLELibrary/BLELibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageLibrary/ImageLibrary.iml" filepath="$PROJECT_DIR$/ImageLibrary/ImageLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LocationLibrary/LocationLibrary.iml" filepath="$PROJECT_DIR$/LocationLibrary/LocationLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PullToRefreshLibrary/PullToRefreshLibrary.iml" filepath="$PROJECT_DIR$/PullToRefreshLibrary/PullToRefreshLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QrcodeLibrary/QrcodeLibrary.iml" filepath="$PROJECT_DIR$/QrcodeLibrary/QrcodeLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShareLibrary/ShareLibrary.iml" filepath="$PROJECT_DIR$/ShareLibrary/ShareLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThirdPartyLibrary/ThirdPartyLibrary.iml" filepath="$PROJECT_DIR$/ThirdPartyLibrary/ThirdPartyLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UmengUpdateLibrary/UmengUpdateLibrary.iml" filepath="$PROJECT_DIR$/UmengUpdateLibrary/UmengUpdateLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WheelViewLibrary/WheelViewLibrary.iml" filepath="$PROJECT_DIR$/WheelViewLibrary/WheelViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YiGym/YiGym.iml" filepath="$PROJECT_DIR$/YiGym/YiGym.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WSLibrary/wSLibrary.iml" filepath="$PROJECT_DIR$/WSLibrary/wSLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WidgetLibrary/widgetLibrary.iml" filepath="$PROJECT_DIR$/WidgetLibrary/widgetLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yjs_studio.iml" filepath="$PROJECT_DIR$/yjs_studio.iml" />
+    </modules>
+  </component>
+</project>
+

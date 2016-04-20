@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 意见反馈! -->
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/vTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/vTitle"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_edit_grey_border" >
+
+        <EditText
+            android:id="@+id/et_customer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvLengthDesc"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="请您在这里填写您对e健身的意见，我们将不断改进，感谢您的支持"
+            android:maxLength="200"
+            android:padding="10dp"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/tvLengthDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:text="0/200" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rlContent"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_edit_grey_border"
+        android:hint="手机号或Q号(选填)"
+        android:inputType="number"
+        android:maxLength="11"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/sp16" />
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<com.cy.widgetlibrary.content.CustomTitleView
+    android:id="@+id/ctvTaskDetailsTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</com.cy.widgetlibrary.content.CustomTitleView>
+  <RelativeLayout
+      android:id="@+id/rlTaskAll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginLeft="20dp"
+      android:layout_below="@+id/ctvTaskDetailsTitle">
+      <com.cy.widgetlibrary.view.CustomCircleImageView
+          android:id="@+id/taskHeadView"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:src="@drawable/head"/>
+      <RelativeLayout
+          android:id="@+id/rlTaskDetails"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_toRightOf="@+id/taskHeadView">
+          <TextView
+              android:id="@+id/tvStartTime"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="06-06 17:00"
+              android:textSize="@dimen/sp16"/>
+          <TextView
+              android:id="@+id/tvFinishTime"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="06-06 17:00"
+              android:textSize="@dimen/sp16"
+              android:layout_marginLeft="10dp"
+              android:layout_toRightOf="@+id/tvStartTime"/>
+
+          <TextView
+              android:id="@+id/tvJoinPersonNum"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="4人"
+              android:gravity="center"
+              android:textSize="@dimen/sp16"
+              android:textColor="@color/blue"
+              android:layout_marginTop="10dp"
+              android:drawableLeft="@drawable/h001"
+              android:layout_below="@+id/tvStartTime"/>
+
+          <TextView
+              android:id="@+id/tvTasktarget"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="目标:700km"
+              android:textSize="@dimen/sp16"
+              android:layout_below="@+id/tvFinishTime"
+              android:layout_toRightOf="@+id/tvJoinPersonNum"
+              android:layout_alignLeft="@+id/tvFinishTime"
+              android:gravity="center"
+              android:layout_alignBottom="@+id/tvJoinPersonNum"
+              android:textColor="#E8A97B"/>
+      </RelativeLayout>
+      <TextView
+          android:id="@+id/tvJoinOrNo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/rlTaskDetails"
+          android:layout_alignBottom="@+id/rlTaskDetails"
+          android:layout_alignTop="@+id/rlTaskDetails"
+          android:text="已加入"
+          android:textSize="@dimen/sp18"
+          android:layout_marginLeft="30dp"
+          android:gravity="center" />
+  </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff098567" >
+
+    <ImageView
+        android:id="@+id/imgMoonBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_chase_ta" />
+
+    <com.cy.yigym.view.CustomRotateFrameLayout
+        android:id="@+id/frmContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.cy.yigym.view.content.chaseher.ChaseHerTraceView
+            android:id="@+id/vTrace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_huangguan"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgMoon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imgStar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_start" />
+
+        <RelativeLayout
+            android:id="@+id/rlSurpDistance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/txtSurpDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imgAnchor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:text="剩余距离10m"
+                android:textColor="#ffed4242"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/linFinalHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imgAnchor"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.cy.yigym.view.content.chaseher.ChaseHerHeadView
+                    android:id="@+id/vFinalMyHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp" />
+
+                <com.cy.yigym.view.content.chaseher.ChaseHerHeadView
+                    android:id="@+id/vFinalHerHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgAnchor"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <com.cy.yigym.view.content.chaseher.ChaseHerTraceView
+            android:id="@+id/vChaseHerTrace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <com.cy.yigym.view.content.chaseher.ChaseHerHeadView
+            android:id="@+id/vHerHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.cy.yigym.view.content.chaseher.ChaseHerHeadView
+            android:id="@+id/vMyHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </com.cy.yigym.view.CustomRotateFrameLayout>
+
+</merge>

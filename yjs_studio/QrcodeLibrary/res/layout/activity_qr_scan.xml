@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/vTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/capture_containter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/capture_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/top_mask"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:background="#ffffffff" />
+
+        <RelativeLayout
+            android:id="@+id/capture_crop_layout"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@id/top_mask"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/capture">
+
+            <ImageView
+                android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/scan_line" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/bottom_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/capture_crop_layout"
+            android:background="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/left_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_mask"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/top_mask"
+            android:layout_toLeftOf="@id/capture_crop_layout"
+            android:background="#ffffffff" />
+
+
+        <ImageView
+            android:id="@+id/right_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_mask"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/top_mask"
+            android:layout_toRightOf="@id/capture_crop_layout"
+            android:background="#ffffffff" />
+
+        <TextView
+            android:id="@+id/tvScanView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/capture_crop_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="将二维码图片对准扫描框即可自动扫描"
+            android:textColor="#777"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_below="@id/tvScanView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/centerView"
+                android:layout_centerInParent="true"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent"/>
+            <Button
+                android:id="@+id/btnFamilyUser"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_family"
+                android:layout_toLeftOf="@id/centerView"
+                android:layout_marginRight="16dp"
+                android:text="家庭用户"
+                android:textColor="@color/qr_text_selector"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/btnGymUser"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_gym"
+                android:layout_toRightOf="@id/centerView"
+                android:layout_marginLeft="16dp"
+                android:text="健身房用户"
+                android:textColor="@color/qr_text_selector"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>

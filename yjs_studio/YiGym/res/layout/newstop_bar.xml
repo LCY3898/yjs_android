@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/common_constact"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/constact_group"
+            style="@style/top_private_chat"
+            android:text="@string/private_chat"/>
+        <Button
+            android:id="@+id/constact_all"
+            style="@style/top_inform_news"
+            android:text="@string/inform_news"/>
+    </LinearLayout>
+</RelativeLayout>

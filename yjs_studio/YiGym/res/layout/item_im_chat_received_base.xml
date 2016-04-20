@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="13dp" >
+
+    <TextView
+        android:id="@+id/txtTime"
+        style="@style/im_chat_text_date_style"
+        android:text="今天 20:34" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <com.cy.widgetlibrary.view.CustomCircleImageView
+            android:id="@+id/imgAvatar"
+            style="@style/im_chat_img_avatar_style"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/rlContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgAvatar"
+            android:background="@drawable/chat_left_qp" />
+    </RelativeLayout>
+
+</merge>

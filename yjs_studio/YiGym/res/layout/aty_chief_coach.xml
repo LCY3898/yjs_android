@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/ctvChiefCoachTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.cy.widgetlibrary.content.CustomTitleView>
+
+    <com.hhtech.pulltorefresh.PullToRefreshListView
+        android:id="@+id/chiefCoachListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="@null" />
+
+    <RelativeLayout
+        android:id="@+id/rvEmptyTip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ivNoFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dip"
+            android:background="@drawable/less_find" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivNoFind"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dip"
+            android:text="暂时还没有主教"
+            android:textColor="#606060"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

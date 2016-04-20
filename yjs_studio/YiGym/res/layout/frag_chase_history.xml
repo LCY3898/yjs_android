@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/unfinishLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="未完成"
+            android:textColor="#ff2642" />
+
+        <com.cy.yigym.view.CustomHeightLimitListView
+            android:id="@+id/lvDoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.cy.yigym.view.CustomHeightLimitListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/doneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="已完成"
+            android:textColor="@color/blue" />
+
+        <ListView
+            android:id="@+id/lvDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ListView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ivNoFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dip"
+            android:background="@drawable/less_find" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivNoFind"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dip"
+            android:text="暂无追TA记录"
+            android:textColor="#606060"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

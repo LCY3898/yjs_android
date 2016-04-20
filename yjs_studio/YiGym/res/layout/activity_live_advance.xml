@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.cy.widgetlibrary.content.CustomTitleView>
+
+
+    <LinearLayout
+        android:id="@+id/llAdvanceTime"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="12dp">
+
+        <RelativeLayout
+            android:id="@+id/rlAdvanceTime1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/live_advance_selector" >
+
+            <TextView
+                android:id="@+id/tvDate1"
+                style="@style/live_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="8月16日" />
+
+            <TextView
+                android:id="@+id/tvDay1"
+                style="@style/live_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDate1"
+                android:layout_centerHorizontal="true"
+                android:text="星期一" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAdvanceTime2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/live_advance_selector" >
+
+            <TextView
+                android:id="@+id/tvDate2"
+                style="@style/live_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="8月16日" />
+
+            <TextView
+                android:id="@+id/tvDay2"
+                style="@style/live_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDate2"
+                android:layout_centerHorizontal="true"
+                android:text="星期一" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAdvanceTime3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/live_advance_selector" >
+
+            <TextView
+                android:id="@+id/tvDate3"
+                style="@style/live_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="8月16日" />
+
+            <TextView
+                android:id="@+id/tvDay3"
+                style="@style/live_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDate3"
+                android:layout_centerHorizontal="true"
+                android:text="星期一" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAdvanceTime4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/live_advance_selector" >
+
+            <TextView
+                android:id="@+id/tvDate4"
+                style="@style/live_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="8月16日" />
+
+            <TextView
+                android:id="@+id/tvDay4"
+                style="@style/live_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDate4"
+                android:layout_centerHorizontal="true"
+                android:text="星期一" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llAdvanceTime"
+        android:background="#ffffff"
+        android:scrollbars="@null"
+        >
+    </ListView>
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sep_line_height"
+        android:layout_below="@id/listView"
+        android:background="#bbb" />
+
+</RelativeLayout>

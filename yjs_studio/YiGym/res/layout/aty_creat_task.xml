@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <com.cy.widgetlibrary.content.CustomTitleView
+        android:id="@+id/ctvCreatTaskTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/etTaskTitle"
+            style="@style/creat_task_step_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入标题"
+            android:padding="3dp"
+            android:textColor="#858585"
+            android:textSize="@dimen/sp20" />
+
+        <LinearLayout
+            android:id="@+id/llStartAndFinishBtn"
+            style="@style/creat_task_step_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etTaskTitle"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etStartTime"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_goal"
+                android:gravity="center"
+                android:hint="开始时间"
+                android:textColor="#747474"
+                android:textSize="@dimen/sp17" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0.3dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaa" />
+
+            <EditText
+                android:id="@+id/etFinishTime"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_goal"
+                android:gravity="center"
+                android:hint="结束时间"
+                android:textColor="#747474"
+                android:textSize="@dimen/sp17" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTaskSetting2"
+            style="@style/creat_task_step_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llStartAndFinishBtn"
+            android:text="请设置任务目标"
+            android:textColor="#858585"
+            android:textSize="@dimen/sp14" />
+
+        <LinearLayout
+            android:id="@+id/llTaskBtnGroup"
+            style="@style/creat_task_step_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTaskSetting2"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnTasktime"
+                style="@style/goal_lable_style"
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="时间" />
+
+            <Button
+                android:id="@+id/btnTaskDis"
+                style="@style/goal_lable_style"
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="距离" />
+
+            <Button
+                android:id="@+id/btnTaskCal"
+                style="@style/goal_lable_style"
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="卡路里" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSeekbar"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_below="@+id/llTaskBtnGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="205dp"
+                    android:layout_height="205dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/goal_bg_cir" />
+
+                <com.cy.yigym.view.CircularSeekBar
+                    android:id="@+id/seekbar_taskSetting"
+                    android:layout_width="205dp"
+                    android:layout_height="205dp"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_bluecirclebar" />
+
+            <TextView
+                android:id="@+id/tv_taskSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="min"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/sp40" />
+
+            <TextView
+                android:id="@+id/tvTaskCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_taskSetting"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="min"
+                android:textColor="#757777"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/etTaskDescribe"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/rlSeekbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_goal"
+            android:gravity="start"
+            android:hint="请简要描述所做任务的背景，有趣的背景更能吸引用户的加入哦～"
+            android:textSize="@dimen/sp10" />
+    </RelativeLayout>
+
+</LinearLayout>

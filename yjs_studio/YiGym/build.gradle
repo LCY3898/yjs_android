@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.efit.sport"
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 39
+        versionName "1.0.19"
+    }
+
+    packagingOptions{
+        exclude "lib/armeabi/libvlcjni.so"
+        exclude "lib/armeabi/libiomx-gingerbread.so"
+        exclude "lib/armeabi/libiomx-hc.so"
+        exclude "lib/armeabi/libiomx-ics.so"
+        exclude "lib/armeabi/libzbar.so"
+    }
+	sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            //java.srcDirs = ['src','ytxsrc']
+            java.srcDirs = ['src']
+            if(project.USE_NIM.equals("true")) {
+                java.srcDirs += ['nim_src']
+            } else {
+                java.srcDirs += ['hxsrc']
+            }
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+
+    signingConfigs {
+        release {
+            storeFile file("YiGymkeystore.jks")
+            storePassword "hhtech_yigym"
+            keyAlias "yigym"
+            keyPassword "hhtech_yigym"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+		
+		lintOptions {
+			abortOnError false
+		}
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], exclude: ['android-support*.jar'], dir: 'libs')
+    compile project(':WheelViewLibrary')
+    compile project(':widgetLibrary')
+    compile project(':wSLibrary')
+    compile project(':ShareLibrary')
+    compile project(':BaseLibrary')
+    compile project(':QrcodeLibrary')
+    compile project(':BLELibrary')
+    compile project(':ImageLibrary')
+    compile project(':UmengUpdateLibrary')
+    compile project(':LocationLibrary')
+    compile project(':PullToRefreshLibrary')
+    compile project(':ThirdPartyLibrary')
+    compile project(':libraries:AChartSDK')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/rlWeiXin"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgWeixin"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/exer_wechat" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imgWeixin"
+            android:layout_marginTop="10dip"
+            android:text="微信好友"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPengYouQuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="30dip"
+        android:layout_toRightOf="@+id/rlWeiXin">
+    <ImageView
+        android:id="@+id/imgWeicircle"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/exer_friend" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imgWeicircle"
+            android:layout_marginTop="10dip"
+            android:text="微信朋友圈"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSinaWeiBo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dip"
+        android:layout_weight="1"
+        android:layout_toRightOf="@+id/rlPengYouQuan">
+    <ImageView
+        android:id="@+id/imgSinaweibo"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/exer_sina" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imgSinaweibo"
+            android:layout_marginTop="10dip"
+            android:text="新浪微博"/>
+    </RelativeLayout>
+</merge>
