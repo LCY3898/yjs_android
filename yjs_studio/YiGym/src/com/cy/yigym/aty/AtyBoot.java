@@ -10,8 +10,6 @@ import com.cy.yigym.service.WSService;
 import com.cy.yigym.utils.DataStorageUtils;
 import com.cy.yigym.utils.ServiceUtils;
 import com.efit.sport.R;
-import com.efit.sport.livecast.AtyLiveCast;
-import com.efit.sport.livecast.LiveCastHelper;
 import com.efit.sport.mgr.LoginMgr;
 import com.hhtech.base.AppUtils;
 import com.sport.efit.constant.LoginChannel;
@@ -79,12 +77,6 @@ public class AtyBoot extends BaseFragmentActivity {
 		if (!DataStorageUtils.isLogin()
 				|| DataStorageUtils.getNetEaseAccount() == null) {
 			startActivity(AtyLogin.class);
-//			Intent intent = new Intent(mContext, AtyLiveCast.class);
-//			LiveCastHelper.saveVideoInfo(intent, LiveCastHelper
-//					.genVideoInfo("", "",
-//							"", -1, ""
-//							, ""));
-//			mContext.startActivity(intent);
 			finish();
 			return;
 		}

@@ -13,16 +13,10 @@ import com.cy.widgetlibrary.base.ActivityManager;
 import com.cy.yigym.aty.AtyMessages;
 import com.cy.yigym.utils.DataStorageUtils;
 import com.efit.sport.R;
-import com.efit.sport.persist.bean.SystemNotice;
 import com.google.gson.Gson;
 import com.hhtech.base.AppUtils;
-
-import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Map;
-
-import de.greenrobot.event.EventBus;
 
 /**
  * Created by tangtt on 2015/8/26 0026.
@@ -33,7 +27,7 @@ public class NotifyEventHandler implements NotifyListener {
     private final static String TAG = NotifyEventHandler.class.getSimpleName();
 
     private static Map<String,Class<? extends BaseNotifyEvent>> noticeMap
-            = new HashMap<String,Class<? extends BaseNotifyEvent>>();
+            = new HashMap<>();
     static {
         noticeMap.put("chase",ChaseNotifyEvent.class);
     }
@@ -68,6 +62,8 @@ public class NotifyEventHandler implements NotifyListener {
             vibrator.vibrate(vibrate,-1);
         } else {
             NotificationManager nm = (NotificationManager)ctx.getSystemService(Context.NOTIFICATION_SERVICE);
+            Notification.Builder notifactionBuilder = new Notification.Builder(ctx);
+
             Notification n = new Notification(R.drawable.ic_launcher, "系统消息", System.currentTimeMillis());
             n.flags = Notification.FLAG_AUTO_CANCEL;
             n.defaults = Notification.DEFAULT_SOUND;
@@ -79,13 +75,12 @@ public class NotifyEventHandler implements NotifyListener {
                     R.string.app_name,
                     i,
                     PendingIntent.FLAG_UPDATE_CURRENT);
-
-            n.setLatestEventInfo(
+           /* n.setLatestEventInfo(
                     ctx,
                     getEventTitle(event),
                     getEventContent(event),
                     contentIntent);
-            nm.notify(R.string.app_name, n);
+            nm.notify(R.string.app_name, n);*/
         }
     }
 

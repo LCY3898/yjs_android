@@ -14,10 +14,10 @@
       <module fileurl="file://$PROJECT_DIR$/UmengUpdateLibrary/UmengUpdateLibrary.iml" filepath="$PROJECT_DIR$/UmengUpdateLibrary/UmengUpdateLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/WheelViewLibrary/WheelViewLibrary.iml" filepath="$PROJECT_DIR$/WheelViewLibrary/WheelViewLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/YiGym/YiGym.iml" filepath="$PROJECT_DIR$/YiGym/YiGym.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/WSLibrary/wSLibrary.iml" filepath="$PROJECT_DIR$/WSLibrary/wSLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/WidgetLibrary/widgetLibrary.iml" filepath="$PROJECT_DIR$/WidgetLibrary/widgetLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/yjs_studio.iml" filepath="$PROJECT_DIR$/yjs_studio.iml" />
     </modules>
   </component>
 </project>
-

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/BLELibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/BaseLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/ImageLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/LocationLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/PullToRefreshLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/QrcodeLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/ShareLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/ThirdPartyLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/UmengUpdateLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/WSLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/WheelViewLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/WidgetLibrary" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/YiGym" vcs="svn" />
   </component>
 </project>
-

@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.efit.sport"
         minSdkVersion 18
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 39
         versionName "1.0.19"
     }
@@ -42,34 +43,16 @@ android {
     }
 
 
-    signingConfigs {
-        release {
-            storeFile file("YiGymkeystore.jks")
-            storePassword "hhtech_yigym"
-            keyAlias "yigym"
-            keyPassword "hhtech_yigym"
-        }
-    }
-
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            signingConfig signingConfigs.release
         }
 
-        debug {
-            signingConfig signingConfigs.release
-        }
-		
-		lintOptions {
-			abortOnError false
-		}
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], exclude: ['android-support*.jar'], dir: 'libs')
     compile project(':WheelViewLibrary')
     compile project(':widgetLibrary')
     compile project(':wSLibrary')

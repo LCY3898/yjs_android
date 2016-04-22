@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
 	
 	sourceSets {
         main {
@@ -60,7 +60,6 @@ dependencies {
 
     //容联云第五版
     //compile fileTree(dir: 'libs_ytx5', include: ['*.jar'])
-    compile 'com.android.support:support-v4:21.+'
     compile 'com.google.code.gson:gson:2.2.4'
     compile project(':BaseLibrary')
 }
