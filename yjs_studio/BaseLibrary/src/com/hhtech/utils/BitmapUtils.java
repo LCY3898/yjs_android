@@ -60,7 +60,6 @@ public class BitmapUtils {
 	public static Bitmap drawToBitmap(View view,int width,int height) {
 		Bitmap bitmap = null;
 		try {
-
 			view.measure(MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(height,MeasureSpec.EXACTLY));
 			height = view.getMeasuredHeight();
 			width = view.getMeasuredWidth();
